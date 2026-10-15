@@ -1,0 +1,239 @@
+/* =====================================================
+   RESET & GENERAL
+   Remove default browser margins and set base styles
+   ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #e94560;
+}
+
+/* =====================================================
+   LOGIN SECTION
+   Shown first so the user can enter their name
+   Hidden once they join
+   ===================================================== */
+#login-section {
+    background: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#login-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#login-section button {
+    width: 100%;
+    padding: 10px;
+    background: #e94560;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-section button:hover {
+    background: #c73652;
+}
+
+/* =====================================================
+   MAIN APP SECTION
+   Hidden until the user logs in
+   ===================================================== */
+#app-section {
+    display: none;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* =====================================================
+   VIDEO CONTAINERS
+   Local video = your own camera feed
+   Remote video = the other person's feed
+   ===================================================== */
+.video-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.video-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-box span {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #a8a8b3;
+}
+
+video {
+    width: 400px;
+    height: 300px;
+    background: #0f3460;
+    border-radius: 10px;
+    border: 2px solid #e94560;
+    object-fit: cover;
+}
+
+/* =====================================================
+   USERS PANEL
+   Shows who else is connected and lets you call them
+   ===================================================== */
+#users-section {
+    background: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#users-section h3 {
+    margin-bottom: 10px;
+    color: #e94560;
+}
+
+#user-list {
+    list-style: none;
+}
+
+#user-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: #0f3460;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#user-list li button {
+    padding: 5px 15px;
+    background: #e94560;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#user-list li button:hover {
+    background: #c73652;
+}
+
+/* =====================================================
+   CALL CONTROLS
+   Buttons shown during an active call
+   ===================================================== */
+#call-controls {
+    display: none;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#call-controls button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn-mute {
+    background: #0f3460;
+    color: white;
+}
+
+#btn-camera {
+    background: #0f3460;
+    color: white;
+}
+
+#btn-hangup {
+    background: #e94560;
+    color: white;
+}
+
+/* =====================================================
+   STATUS BAR
+   Shows what is currently happening
+   ===================================================== */
+#status {
+    background: #16213e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #a8a8b3;
+    width: 100%;
+    text-align: center;
+}
+
+/* =====================================================
+   INCOMING CALL POPUP
+   Shown when someone is calling you
+   ===================================================== */
+#incoming-call {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #16213e;
+    border: 2px solid #e94560;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#incoming-call p {
+    margin-bottom: 10px;
+}
+
+#incoming-call button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+#btn-accept {
+    background: #4caf50;
+    color: white;
+}
+
+#btn-reject {
+    background: #e94560;
+    color: white;
+}
